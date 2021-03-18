@@ -5,6 +5,7 @@ RUN apt-get update
 RUN apt-get upgrade -y 
 RUN apt-get dist-upgrade -y
 RUN apt-get install wget -y
+RUN apt-get install xvfb -y
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 RUN apt install ./google-chrome-stable_current_amd64.deb -y
 RUN apt-get install openjdk-8-jdk -y
