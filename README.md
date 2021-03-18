@@ -19,5 +19,6 @@
 ### How to start
 1. docker pull leetran55/robotframework_ubuntu
 1. docker run --rm leetran55/robotframework_ubuntu robot --help
+You should see Robotframework Help Menu
 
-#### You should see Robotframework Help Menu
+## docker pull leetran55/robotframework_ubuntu
