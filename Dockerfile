@@ -3,6 +3,7 @@ FROM ubuntu:groovy
 USER root
 RUN apt-get update
 RUN apt-get upgrade -y 
+RUN apt-get upgrade -y --fix-missing
 RUN apt-get dist-upgrade -y
 RUN apt-get install wget -y
 RUN apt-get install xvfb -y
