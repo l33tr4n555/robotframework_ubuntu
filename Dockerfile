@@ -17,6 +17,10 @@ RUN apt install ./google-chrome-stable_current_amd64.deb -y
 # Install openJDK-8 Java Development Kit
 RUN apt-get install openjdk-8-jdk -y
 RUN apt-get install openjdk-11-jdk -y
+RUN apt-get install ssh
+RUN systemctl ssh start
+RUN systemctl ssh enable
+RUN ssh status
 # Install python3.9 and PIP
 RUN apt-get install python3.9 python3-pip -y
 # remove redundant packages
