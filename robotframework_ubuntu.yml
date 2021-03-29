@@ -1,0 +1,29 @@
+# Cron Schedules have been converted using UTC Time Zone and may need to be updated for your location
+trigger:
+  branches:
+    include:
+    - master
+schedules:
+- cron: 0 1 * * 6
+  branches:
+    include:
+    - master
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: ubuntu-20.04
+  steps:
+  - checkout: self
+  - task: Docker@2
+    displayName: buildAndPush
+    inputs:
+      containerRegistry: ca1b9975-3d9e-4fdc-86e4-2dc8098a5e13
+      repository: leetran55/robotframework_ubuntu
+      tags: latest
+...
