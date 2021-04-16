@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get upgrade -y 
 RUN apt-get update -y --fix-missing
 RUN apt-get dist-upgrade -y
+RUN ln -sf /usr/share/zoneinfo/Australia/Melbourne /etc/localtime
 # Install wget to download file
 RUN apt-get install wget -y
 # Install xvfb - fake environment
